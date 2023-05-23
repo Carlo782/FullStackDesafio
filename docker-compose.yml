@@ -1,0 +1,23 @@
+version: "3"
+services:
+  desafio:
+    build:
+      context: ./desafio1
+    ports:
+      - "8080:8080"  
+    networks:
+      - mired    
+  vue:
+    build:
+      context: ./vue_desafio1
+    ports:
+      - "8081:8080"
+    networks:
+      - mired  
+
+networks:
+  mired:
+    driver: bridge
+      
+
+
